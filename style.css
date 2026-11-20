@@ -1,14 +1,74 @@
 /* Soft cream background for the whole page */
 body {
   background-color: #f8f5f0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
   color: #2c2c2c;
+  font-weight: 400;
 }
 
-/* ---------- Sidebar ---------- */
+/* Headings use Fraunces (elegant serif) */
+h1, h2, h3, h4, h5, .display-6 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.75rem;
+  letter-spacing: -0.02em;
+}
+
+h1 em {
+  font-family: "Fraunces", Georgia, serif;
+  color: #c2410c;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* single space for receipts, codes, passwords, small labels */
+.receipt-card,
+.mono,
+small,
+.badge,
+.nav-link,
+button {
+  font-family: "DM Sans", sans-serif;
+}
+
+.receipt-card small,
+.receipt-card .text-muted,
+.mono {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Specific mono places */
+.receipt-card .fs-4,
+.receipt-card .fs-5 {
+  font-family: "Fraunces", serif;
+}
+
+/* Password and network boxes */
+.bg-light {
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+}
 .sidebar {
   background-color: #faf7f2;
   border-right: 1px solid #eee;
+}
+
+/* Logo */
+.logo {
+  height: 42px;
+  width: auto;
+}
+
+/* Navigation icons */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 /* Active navigation link */
@@ -42,11 +102,20 @@ body {
   background-color: #f8f5f0;
 }
 
-/* Big welcome heading */
-h1 em {
-  color: #c2410c;
+/* Welcome card text */
+.welcome-card h3,
+.welcome-card h5 {
+  font-family: "Fraunces", serif;
+}
+
+.welcome-card h3 {
   font-style: italic;
   font-weight: 400;
+}
+
+/* Cards area that holds the overlapping receipt + welcome card */
+.cards-area {
+  min-height: 380px;
 }
 
 /* ---------- Receipt Card ---------- */
@@ -59,7 +128,7 @@ h1 em {
   left: 0;
   top: 20px;
   z-index: 1;
-  transform: rotate(-2deg); /* slight tilt like the design */
+  transform: rotate(-2deg); /* tilt the card  */
 }
 
 /* ---------- Welcome Card ---------- */
@@ -76,29 +145,28 @@ h1 em {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Simple barcode lines */
-.barcode {
+/* Barcode image */
+.barcode-img {
   height: 40px;
-  background: repeating-linear-gradient(
-    90deg,
-    #222 0px,
-    #222 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  border-radius: 4px;
+  width: auto;
+  display: block;
 }
 
-/* ---------- Bottom info cards ---------- */
+/* ---------- Bottom info cards ----- */
 .info-card {
   border: none;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Custom purple for breakfast badge */
-.bg-purple {
-  background-color: #8b5cf6 !important;
+/* Circular icon badges */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }
 
 /* Make cards look nicer on mobile */
@@ -111,8 +179,8 @@ h1 em {
     transform: none;
   }
 
-  .position-relative {
-    min-height: auto !important;
+  .cards-area {
+    min-height: auto;
   }
 
   .sidebar {

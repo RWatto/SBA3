@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Soleil - Booking Confirmed</title>
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
 
-  <!-- Bootstrap CSS -->
+  <!-- Fonts from google Fraunces + DM Sans + DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS ---->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Our custom CSS -->
 
   <link rel="stylesheet" href="style.css">
@@ -20,69 +21,67 @@
 <body>
 
   <!-- Main layout using Bootstrap grid -->
-  <div class="container-fluid p-0">
 
+  <div class="container-fluid p-0">
     <div class="row g-0 min-vh-100">
 
       <!-- ========== SIDEBAR ========== -->
+
       <aside class="col-lg-3 col-md-4 sidebar d-flex flex-column">
         
         <!-- Logo -->
         <div class="p-4">
-
-          <div class="d-flex align-items-center mb-4">
-            <i class="bi bi-sun-fill text-warning me-2 fs-4"></i>
-            <div>
-              <div class="fw-bold" style="color: #c2410c;">Maison</div>
-              <div class="fw-bold text-dark">Soleil</div>
-            </div>
+          <div class="mb-4">
+            <img src="logo.svg" alt="Maison Soleil" class="logo" height="42">
           </div>
 
           <!-- Navigation -->
           <nav class="nav flex-column">
-
-
             <a href="#" class="nav-link active d-flex align-items-center justify-content-between">
-              <span><i class="bi bi-calendar-check me-2"></i> Your stay</span>
+              <span class="d-flex align-items-center">
+                <img src="icon-key.svg" alt="" class="nav-icon me-2" width="20" height="20">
+                Your stay
+              </span>
               <span class="badge bg-danger rounded-pill">1</span>
             </a>
-            <a href="#" class="nav-link"><i class="bi bi-house me-2"></i> The house</a>
-            <a href="#" class="nav-link"><i class="bi bi-geo-alt me-2"></i> Around town</a>
-            <a href="#" class="nav-link"><i class="bi bi-cup-hot me-2"></i> Breakfast</a>
-            <a href="#" class="nav-link"><i class="bi bi-envelope me-2"></i> Messages</a>
+            <a href="#" class="nav-link d-flex align-items-center">
+              <img src="icon-house.svg" alt="" class="nav-icon me-2" width="20" height="20">
+              The house
+            </a>
+            <a href="#" class="nav-link d-flex align-items-center">
+              <img src="icon-pin.svg" alt="" class="nav-icon me-2" width="20" height="20">
+              Around town
+            </a>
+            <a href="#" class="nav-link d-flex align-items-center">
+              <img src="icon-breakfast-outline.svg" alt="" class="nav-icon me-2" width="20" height="20">
+              Breakfast
+            </a>
+            <a href="#" class="nav-link d-flex align-items-center">
+              <img src="icon-mail.svg" alt="" class="nav-icon me-2" width="20" height="20">
+              Messages
+            </a>
           </nav>
         </div>
 
-        <!-- Weather + Address (pushed to bottom) -->
+        <!--- Weather + Address (move to bottom) ---->
+
         <div class="mt-auto p-4">
           <!-- Weather card -->
           <div class="weather-card mb-4">
-
-
             <small class="text-uppercase">Today in Cassis</small>
             <div class="d-flex align-items-center">
-
               <div class="display-6 fw-bold me-2">27°</div>
-              <i class="bi bi-sun-fill text-warning fs-3"></i>
+              <img src="icon-weather.svg" alt="Sunny" width="48" height="48">
             </div>
             <small>Sunny · light breeze</small>
-          </div>
-
-          <small class="text-muted d-block">EST. 1987</small>
-          <small class="text-muted d-block mb-2">
-            MAISON SOLEIL · 12 RUE DES<br>
-            
-            OLIVIERS · CASSIS
-          </small>
-          <small class="text-muted">© 2026 MAISON SOLEIL</small>
-        </div>
+     
       </aside>
 
       <!-- ========== MAIN CONTENT ========== -->
       <main class="col-lg-9 col-md-8 main-content p-4 p-lg-5">
 
         <!-- Top bar -->
-        <div class="d-flex justify-content-between align-items-start mb-4">
+        <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-3">
           <div>
             <small class="text-uppercase text-muted">Booking · Confirmed</small>
             <h1 class="mt-2">Bienvenue, <em>Lucia.</em></h1>
@@ -94,7 +93,7 @@
         </div>
 
         <!-- Receipt + Welcome Card area -->
-        <div class="position-relative mb-5" style="min-height: 340px;">
+        <div class="position-relative mb-5 cards-area">
           
           <!-- Receipt Card -->
           <div class="card receipt-card shadow-sm">
@@ -139,8 +138,10 @@
               </div>
               <small class="text-muted">PAID · WISE · GBP</small>
 
-              <!-- Simple barcode placeholder -->
-              <div class="barcode mt-3"></div>
+              <!-- Barcode -->
+              <div class="mt-3">
+                <img src="icon-barcode.svg" alt="Barcode" class="barcode-img" width="120">
+              </div>
             </div>
           </div>
 
@@ -149,7 +150,7 @@
             <div class="card-body">
               <div class="d-flex justify-content-between mb-3">
                 <small>WELCOME CARD</small>
-                <i class="bi bi-sun fs-4"></i>
+                <img src="icon-sun.svg" alt="" width="32" height="32">
               </div>
               <h5 class="fst-italic">A note from your host,</h5>
               <h3 class="mb-3">Margaux.</h3>
@@ -166,7 +167,7 @@
           </div>
 
           <!-- Small hover hint -->
-          <div class="text-center mt-2">
+          <div class="text-center mt-3">
             <small class="text-muted">← HOVER TO FAN →</small>
           </div>
         </div>
@@ -178,7 +179,9 @@
             <div class="card h-100 info-card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <span class="badge bg-danger rounded-circle p-2"><i class="bi bi-key"></i></span>
+                  <span class="icon-badge bg-danger">
+                    <img src="icon-key.svg" alt="" width="20" height="20" style="filter: brightness(0) invert(1);">
+                  </span>
                   <span class="text-muted">01</span>
                 </div>
                 <small class="text-danger text-uppercase">Arrival</small>
@@ -198,7 +201,9 @@
             <div class="card h-100 info-card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <span class="badge bg-primary rounded-circle p-2"><i class="bi bi-wifi"></i></span>
+                  <span class="icon-badge bg-primary">
+                    <img src="icon-wifi.svg" alt="" width="20" height="20">
+                  </span>
                   <span class="text-muted">02</span>
                 </div>
                 <small class="text-primary text-uppercase">Wifi</small>
@@ -224,7 +229,9 @@
             <div class="card h-100 info-card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <span class="badge bg-purple rounded-circle p-2"><i class="bi bi-cup-hot"></i></span>
+                  <span class="icon-badge" style="background-color: #8b5cf6;">
+                    <img src="icon-breakfast.svg" alt="" width="20" height="20">
+                  </span>
                   <span class="text-muted">03</span>
                 </div>
                 <small class="text-uppercase" style="color:#8b5cf6;">Breakfast</small>
@@ -244,7 +251,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS (for components that need it) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
