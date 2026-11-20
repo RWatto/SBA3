@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Soleil - Booking Confirmed</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Our custom CSS -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main layout using Bootstrap grid -->
+  <div class="container-fluid p-0">
+
+    <div class="row g-0 min-vh-100">
+
+      <!-- ========== SIDEBAR ========== -->
+      <aside class="col-lg-3 col-md-4 sidebar d-flex flex-column">
+        
+        <!-- Logo -->
+        <div class="p-4">
+
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-sun-fill text-warning me-2 fs-4"></i>
+            <div>
+              <div class="fw-bold" style="color: #c2410c;">Maison</div>
+              <div class="fw-bold text-dark">Soleil</div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="nav flex-column">
+
+
+            <a href="#" class="nav-link active d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-calendar-check me-2"></i> Your stay</span>
+              <span class="badge bg-danger rounded-pill">1</span>
+            </a>
+            <a href="#" class="nav-link"><i class="bi bi-house me-2"></i> The house</a>
+            <a href="#" class="nav-link"><i class="bi bi-geo-alt me-2"></i> Around town</a>
+            <a href="#" class="nav-link"><i class="bi bi-cup-hot me-2"></i> Breakfast</a>
+            <a href="#" class="nav-link"><i class="bi bi-envelope me-2"></i> Messages</a>
+          </nav>
+        </div>
+
+        <!-- Weather + Address (pushed to bottom) -->
+        <div class="mt-auto p-4">
+          <!-- Weather card -->
+          <div class="weather-card mb-4">
+
+
+            <small class="text-uppercase">Today in Cassis</small>
+            <div class="d-flex align-items-center">
+
+              <div class="display-6 fw-bold me-2">27°</div>
+              <i class="bi bi-sun-fill text-warning fs-3"></i>
+            </div>
+            <small>Sunny · light breeze</small>
+          </div>
+
+          <small class="text-muted d-block">EST. 1987</small>
+          <small class="text-muted d-block mb-2">
+            MAISON SOLEIL · 12 RUE DES<br>
+            
+            OLIVIERS · CASSIS
+          </small>
+          <small class="text-muted">© 2026 MAISON SOLEIL</small>
+        </div>
+      </aside>
+
+      <!-- ========== MAIN CONTENT ========== -->
+      <main class="col-lg-9 col-md-8 main-content p-4 p-lg-5">
+
+        <!-- Top bar -->
+        <div class="d-flex justify-content-between align-items-start mb-4">
+          <div>
+            <small class="text-uppercase text-muted">Booking · Confirmed</small>
+            <h1 class="mt-2">Bienvenue, <em>Lucia.</em></h1>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-dark rounded-pill px-3">Print receipt</button>
+            <button class="btn btn-dark rounded-pill px-3">Add to calendar</button>
+          </div>
+        </div>
+
+        <!-- Receipt + Welcome Card area -->
+        <div class="position-relative mb-5" style="min-height: 340px;">
+          
+          <!-- Receipt Card -->
+          <div class="card receipt-card shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <small class="text-muted">RECEIPT</small>
+                  <h5 class="mb-0">Your stay</h5>
+                </div>
+                <small class="text-muted text-end">N° MS-2026<br>0421-AH</small>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <small class="text-muted">CHECK IN</small>
+                  <div class="fs-5 fw-bold">25 Apr</div>
+                  <small>Saturday · 15:00</small>
+                </div>
+                <div class="col-6">
+                  <small class="text-muted">CHECK OUT</small>
+                  <div class="fs-5 fw-bold">29 Apr</div>
+                  <small>Wednesday · 11:00</small>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between border-top pt-2">
+                <span>Room · La Garrigue × 4 nights</span>
+                <span>€ 620.00</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Breakfast × 2 guests</span>
+                <span>€ 96.00</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Tourist tax</span>
+                <span>€ 14.40</span>
+              </div>
+
+              <div class="d-flex justify-content-between border-top pt-2 mt-2">
+                <strong>TOTAL PAID</strong>
+                <strong class="fs-4">€730.40</strong>
+              </div>
+              <small class="text-muted">PAID · WISE · GBP</small>
+
+              <!-- Simple barcode placeholder -->
+              <div class="barcode mt-3"></div>
+            </div>
+          </div>
+
+          <!-- Welcome Card (overlaps the receipt) -->
+          <div class="card welcome-card text-white">
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <small>WELCOME CARD</small>
+                <i class="bi bi-sun fs-4"></i>
+              </div>
+              <h5 class="fst-italic">A note from your host,</h5>
+              <h3 class="mb-3">Margaux.</h3>
+              <p>
+                We're so glad you're coming. The shutters will be open,<br>
+                the lemonade cold, and the cat – Poivre – pretending<br>
+                not to notice you.
+              </p>
+              <div class="mt-4">
+                <small>ROOM</small>
+                <div class="fs-5">La Garrigue</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small hover hint -->
+          <div class="text-center mt-2">
+            <small class="text-muted">← HOVER TO FAN →</small>
+          </div>
+        </div>
+
+        <!-- Bottom info cards -->
+        <div class="row g-3">
+          <!-- Arrival -->
+          <div class="col-md-4">
+            <div class="card h-100 info-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-danger rounded-circle p-2"><i class="bi bi-key"></i></span>
+                  <span class="text-muted">01</span>
+                </div>
+                <small class="text-danger text-uppercase">Arrival</small>
+                <h5>Check-in from 15:00</h5>
+                <small class="text-muted d-block mb-2">Sat, 25 April</small>
+                <p class="small mb-0">
+                  Ring the brass bell by the blue door. If we're at
+                  the market, the key is in the terracotta pot by
+                  the olive tree.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wifi -->
+          <div class="col-md-4">
+            <div class="card h-100 info-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary rounded-circle p-2"><i class="bi bi-wifi"></i></span>
+                  <span class="text-muted">02</span>
+                </div>
+                <small class="text-primary text-uppercase">Wifi</small>
+                <h5>Le Soleil · Guest</h5>
+                <small class="text-muted d-block mb-3">Password below</small>
+                <div class="bg-light rounded p-2 mb-2 small">
+                  <span class="text-muted">NETWORK</span>
+                  <span class="float-end">Le Soleil · Guest</span>
+                </div>
+                <div class="bg-light rounded p-2 small d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="text-muted">PASSWORD</span>
+                    <span class="ms-2">soleil-2026</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-secondary">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breakfast -->
+          <div class="col-md-4">
+            <div class="card h-100 info-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-purple rounded-circle p-2"><i class="bi bi-cup-hot"></i></span>
+                  <span class="text-muted">03</span>
+                </div>
+                <small class="text-uppercase" style="color:#8b5cf6;">Breakfast</small>
+                <h5>Served 8 – 10:30</h5>
+                <small class="text-muted d-block mb-2">On the terrace</small>
+                <p class="small mb-0">
+                  Fresh figs, Marseille honey, pain au levain, and
+                  espresso. Gluten-free option? Leave a note the
+                  night before.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (for components that need it) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
